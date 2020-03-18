@@ -1,33 +1,17 @@
-import React, { FC, useEffect, useState } from 'react'
-import { TFunction } from 'i18next'
-import noop from 'lodash/noop'
-import { LocalizationContext } from '../mixins/context'
-import init from '../mixins/i18next'
+import React, { FC } from 'react'
+import i18next from 'i18next'
+import { I18nextProvider, I18nextProviderProps } from 'react-i18next'
 
-interface LocalizationProps {
-  path: string
+interface LocalizationProps extends I18nextProviderProps {
+  // empty
 }
 
-const Localization: FC<LocalizationProps> = props => {
-  const { path, children } = props
-  const [isLoading, setIsLoading] = useState(true)
-  let t: TFunction = noop
-
-  useEffect(() => {
-    loadLocales()
-  }, [])
-
-  const loadLocales = async () => {
-    t = await init(path)
-    setIsLoading(false)
-  }
-
-  if (isLoading) return null
-
+const Localization: FC<Omit<LocalizationProps, 'i18n'>> = props => {
+  const { children, ...i18NextProps } = props
   return (
-    <LocalizationContext.Provider value={{ t }}>
+    <I18nextProvider i18n={i18next} {...i18NextProps}>
       {children}
-    </LocalizationContext.Provider>
+    </I18nextProvider>
   )
 }
 

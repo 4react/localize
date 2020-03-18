@@ -1,0 +1,6 @@
+{
+  "basic": "This is a simple line",
+  "text-numeric-fillers": "Hi, my name's {{name}} and I'm {{age}} years old",
+  "components-fillers": "This {{component}} is a component",
+  "text": "text"
+}

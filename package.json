@@ -15,25 +15,27 @@
     "clean": "rimraf lib",
     "rollup": "rollup -c",
     "build": "npm run clean && npm run rollup",
-    "story": "start-storybook -p 9009"
+    "story": "start-storybook -p 9009 -s .storybook/public"
   },
   "dependencies": {
-    "i18next": "^19.3.2",
     "i18next-browser-languagedetector": "^4.0.2",
     "i18next-xhr-backend": "^3.2.2",
     "lodash": "^4.17.15",
-    "react": "^16.10.2"
+    "react": "^16.10.2",
+    "react-i18next": "^11.3.3",
+    "i18next": "^19.0.0"
   },
   "devDependencies": {
     "@babel/polyfill": "latest",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "@babel/preset-typescript": "^7.7.0",
-    "@storybook/addon-actions": "^5.3.12",
-    "@storybook/addon-knobs": "^5.3.12",
-    "@storybook/addon-viewport": "^5.3.12",
+    "@storybook/addon-actions": "^5.3.17",
+    "@storybook/addon-knobs": "^5.3.17",
+    "@storybook/addon-viewport": "^5.3.17",
     "@storybook/preset-typescript": "^1.2.0",
-    "@storybook/react": "^5.3.12",
+    "@storybook/react": "^5.3.17",
+    "@types/i18next": "^13.0.0",
     "@types/lodash": "^4.14.149",
     "@typescript-eslint/parser": "^2.6.1",
     "@zanomate/eslint-config": "^0.5.0",
