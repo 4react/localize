@@ -16,9 +16,6 @@ addParameters({
   }
 })
 
-require('./style/index.css')
-require('./stories/_stories.js')
-
 configure(() => {
   require('./stories/_stories.js')
 }, module)

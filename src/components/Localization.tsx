@@ -7,9 +7,9 @@ interface LocalizationProps extends I18nextProviderProps {
 }
 
 const Localization: FC<Omit<LocalizationProps, 'i18n'>> = props => {
-  const { children, ...i18NextProps } = props
+  const { defaultNS = 'translations', children } = props
   return (
-    <I18nextProvider i18n={i18next} {...i18NextProps}>
+    <I18nextProvider i18n={i18next} defaultNS={defaultNS}>
       {children}
     </I18nextProvider>
   )

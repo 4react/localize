@@ -1,18 +1,16 @@
 import React, { FC, isValidElement, Fragment } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useNamespace } from './Namespace'
 
 interface LocalizedProps {
   label: string
+  ns?: string
   fillers?: { [filler: string]: any }
   lang?: string
 }
 
 const Localized: FC<LocalizedProps> = props => {
-  const { label, fillers = {}, lang } = props
-
-  const namespace = useNamespace()
-  const { t } = useTranslation(namespace)
+  const { label, ns, fillers = {}, lang } = props
+  const { t } = useTranslation(ns)
 
   const i18nextFillers: { [key: string]: string } = {}
   Object.keys(fillers).forEach(key => {
