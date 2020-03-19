@@ -2,11 +2,11 @@ import React, { FC } from 'react'
 import i18next from 'i18next'
 import { I18nextProvider, I18nextProviderProps } from 'react-i18next'
 
-interface LocalizationProps extends I18nextProviderProps {
+interface LocalizationProps extends Omit<I18nextProviderProps, 'i18n'> {
   // empty
 }
 
-const Localization: FC<Omit<LocalizationProps, 'i18n'>> = props => {
+const Localization: FC<LocalizationProps> = props => {
   const { defaultNS = 'translations', children } = props
   return (
     <I18nextProvider i18n={i18next} defaultNS={defaultNS}>
