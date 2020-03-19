@@ -7,6 +7,7 @@ import pkg from './package.json'
 
 const libraryName = 'localize'
 const globalLibs = Object.keys(pkg.dependencies)
+const externalLibs = Object.keys(pkg.peerDependencies)
 
 export default {
   input: 'src/index.ts',
@@ -42,5 +43,6 @@ export default {
     commonjs({
       include: 'node_modules/**'
     })
-  ]
+  ],
+  externals: externalLibs
 }
