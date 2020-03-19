@@ -44,5 +44,5 @@ export default {
       include: 'node_modules/**'
     })
   ],
-  externals: externalLibs
+  external: externalLibs
 }

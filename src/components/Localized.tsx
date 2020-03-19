@@ -1,5 +1,6 @@
-import React, { FC, isValidElement, Fragment } from 'react'
+import React, { FC, isValidElement, Fragment, useContext } from 'react'
 import { useTranslation } from 'react-i18next'
+import LocalizationContext from '../mixins/context'
 
 interface LocalizedProps {
   label: string
@@ -10,7 +11,8 @@ interface LocalizedProps {
 
 const Localized: FC<LocalizedProps> = props => {
   const { label, ns, fillers = {}, lang } = props
-  const { t } = useTranslation(ns)
+  const { defaultNS } = useContext(LocalizationContext)
+  const { t } = useTranslation(ns || defaultNS)
 
   const i18nextFillers: { [key: string]: string } = {}
   Object.keys(fillers).forEach(key => {

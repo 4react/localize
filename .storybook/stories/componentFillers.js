@@ -6,7 +6,7 @@ const ComponentFillersStory = () => {
   const lang = language('lang', 'props')
   return (
     <Localized
-      label="components-fillers"
+      label="samples.components-fillers"
       lang={lang}
       fillers={{
         component: (

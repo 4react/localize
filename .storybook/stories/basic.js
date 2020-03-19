@@ -6,7 +6,7 @@ const BasicStory = () => {
   const lang = language('lang', 'props')
   return (
     <Localized
-      label="basic"
+      label="samples.basic"
       lang={lang}
     />
   )

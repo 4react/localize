@@ -9,7 +9,7 @@ const TextNumberFillersStory = () => {
   const age = number('fillers[age]', 28, { min: 1 }, 'props')
   return (
     <Localized
-      label="text-numeric-fillers"
+      label="samples.text-numeric-fillers"
       lang={lang}
       fillers={{
         name: name,

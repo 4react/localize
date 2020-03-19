@@ -1,6 +1,6 @@
 {
   "name": "@zanomate/localize",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "Matteo Zanoncello",
   "license": "ISC",
   "main": "lib/localize.js",

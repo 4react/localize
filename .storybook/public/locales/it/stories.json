@@ -1,6 +1,0 @@
-{
-  "basic": "Questa è una semplice frase",
-  "text-numeric-fillers": "Ciao, mi chiamo {{name}} ed ho {{age}} anni",
-  "components-fillers": "Questo {{component}} è un componente",
-  "text": "testo"
-}
