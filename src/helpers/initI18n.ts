@@ -1,4 +1,4 @@
-import i18next, { InitOptions } from 'i18next'
+import i18n, { InitOptions } from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import I18nextBrowserLanguageDetector from 'i18next-browser-languagedetector'
 import I18NextXhrBackend from 'i18next-xhr-backend'
@@ -23,7 +23,7 @@ const initI18n = (
     }
   }
   const options = merge(defaultOptions, customOptions)
-  i18next
+  i18n
     .use(I18nextBrowserLanguageDetector)
     .use(I18NextXhrBackend)
     .use(initReactI18next)
