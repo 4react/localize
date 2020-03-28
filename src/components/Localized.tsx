@@ -2,6 +2,8 @@ import React, { FC, isValidElement, Fragment, useContext } from 'react'
 import { useTranslation } from 'react-i18next'
 import LocalizationContext from '../mixins/context'
 
+const placeholder = new RegExp('{{([a-zA-Z0-9]+)}}')
+
 interface LocalizedProps {
   label: string
   ns?: string
@@ -31,20 +33,19 @@ const Localized: FC<LocalizedProps> = props => {
     }
   )
 
-  const parts = localizedLabel.split(/({{[a-zA-Z0-9]+}})/g)
+  const parts = localizedLabel.split(placeholder)
   return (
     <>
-      {parts.map((part, index) => {
-        const matches = part.match(/{{([a-zA-Z0-9]+)}}/)
-        if (matches?.length) {
+      {parts.map((part, idx) => {
+        if (idx % 2) {
           return (
-            <Fragment key={index}>
-              {fillers[matches[1]]}
+            <Fragment key={part}>
+              {fillers[part]}
             </Fragment>
           )
         }
         return (
-          <Fragment key={index}>
+          <Fragment key={part}>
             {part}
           </Fragment>
         )

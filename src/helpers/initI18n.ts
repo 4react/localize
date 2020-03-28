@@ -4,11 +4,11 @@ import I18nextBrowserLanguageDetector from 'i18next-browser-languagedetector'
 import I18NextXhrBackend from 'i18next-xhr-backend'
 import merge from 'lodash/merge'
 
-const initI18n = (
+const initI18n = async (
   languages: string[] = ['en'],
   namespaces: string[] = ['translations'],
   customOptions: InitOptions = {}
-  ) => {
+) => {
   const defaultOptions = {
     backend: {
       loadPath: `/locales/{{lng}}/{{ns}}.json`,
@@ -19,11 +19,11 @@ const initI18n = (
     preload: languages,
     ns: namespaces,
     react: {
-      useSuspense: false,
+      useSuspense: false
     }
   }
   const options = merge(defaultOptions, customOptions)
-  i18n
+  return i18n
     .use(I18nextBrowserLanguageDetector)
     .use(I18NextXhrBackend)
     .use(initReactI18next)

@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
 import i18next from 'i18next'
-import { I18nextProvider, I18nextProviderProps } from 'react-i18next'
+import { I18nextProvider } from 'react-i18next'
 import LocalizationContext from '../mixins/context'
 
-interface LocalizationProps extends Omit<I18nextProviderProps, 'i18n'> {
-  // empty
+interface LocalizationProps {
+  defaultNS?: string
 }
 
 const Localization: FC<LocalizationProps> = props => {

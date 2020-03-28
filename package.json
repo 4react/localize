@@ -1,6 +1,6 @@
 {
   "name": "@zanomate/localize",
-  "version": "0.1.5",
+  "version": "2020.1.0",
   "author": "Matteo Zanoncello",
   "license": "ISC",
   "main": "lib/localize.js",
@@ -15,7 +15,8 @@
     "clean": "rimraf lib",
     "rollup": "rollup -c",
     "build": "npm run clean && npm run rollup",
-    "story": "start-storybook -p 9009 -s .storybook/public"
+    "story": "start-storybook -p 9009 -s .storybook/public",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "i18next-browser-languagedetector": "^4.0.2",
@@ -46,7 +47,7 @@
     "@types/i18next": "^13.0.0",
     "@types/lodash": "^4.14.149",
     "@typescript-eslint/parser": "^2.6.1",
-    "@zanomate/eslint-config": "^0.5.0",
+    "@zanomate/eslint-config": "2020.1.1",
     "babel-loader": "^8.0.6",
     "eslint": "^6.6.0",
     "react-docgen-typescript-loader": "^3.6.0",

@@ -2,5 +2,5 @@
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "extends": "@zanomate"
+  "extends": "@zanomate/eslint-config/typescript"
 }
