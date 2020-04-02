@@ -1,6 +1,4 @@
 {
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  },
-  "extends": "@zanomate/eslint-config/typescript"
+  "parser": "@typescript-eslint/parser",
+  "extends": "@4react/eslint-config/typescript"
 }

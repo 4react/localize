@@ -7,7 +7,7 @@ addDecorator(withKnobs)
 
 addParameters({
   options: {
-    name: '@zanomate/localize',
+    name: '@4react/localize',
     showPanel: true,
     panelPosition: 'right'
   },
