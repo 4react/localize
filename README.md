@@ -1,6 +1,6 @@
 # @4react / localize
 
-React-to-use **i18n** configuration and components for React Applications.
+Ready-to-use **i18n** configuration and components for React Applications.
 
 #### NOTE
 The purpose of this package is to provide a simple and standard solution for the largest amount of projects.
